@@ -41,11 +41,9 @@ public class StepDefinitions {
         MockitoAnnotations.initMocks(this);
     }
 
-
-
     @Given("una venta en proceso")
     public void una_venta_en_proceso() {
-        ventaIniciada = new Venta(null, null);
+        ventaIniciada = new Venta(null);
     }
 
     @Given("un articulo con codigo {int} con los siguientes datos:")
@@ -139,7 +137,7 @@ public class StepDefinitions {
         ArrayList<LineaDeVenta> lineasSimuladas = new ArrayList<LineaDeVenta>();
         lineasSimuladas.add(lineaDeVenta);
 
-        Venta ventaSimulado = new Venta(lineasSimuladas,subtotal);
+        Venta ventaSimulado = new Venta(lineasSimuladas);
 
         Mockito.when(respositorioArticulo.agregarLineaDeVenta(ventaIniciada,lineaDeVenta))
                 .thenReturn(ventaSimulado);

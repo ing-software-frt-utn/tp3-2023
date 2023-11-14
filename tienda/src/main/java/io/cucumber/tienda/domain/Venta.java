@@ -6,9 +6,9 @@ public class Venta {
     private final ArrayList<LineaDeVenta> lineaDeVentas;
     private final Double total;
 
-    public Venta(ArrayList<LineaDeVenta> lineaDeVentas, Double total) {
+    public Venta(ArrayList<LineaDeVenta> lineaDeVentas) {
         this.lineaDeVentas = (lineaDeVentas != null) ? new ArrayList<>(lineaDeVentas) : new ArrayList<>();
-        this.total = (total == null? calcularTotal() : total);
+        this.total = calcularTotal();
     }
 
     private Double calcularTotal() {
