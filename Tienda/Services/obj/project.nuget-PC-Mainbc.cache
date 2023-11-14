@@ -1,0 +1,19 @@
+{
+  "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "liJrqbwkVAmSwkzKEEQeDGhCIGSPDy8RxV9FQswBk9p5mQydZSliR6u6CFq3qPY4vzEgWFZn19YInF/CIrykQQ==",
+=======
+  "dgSpecHash": "yMCN5LNvP9f5x1KH8HoZ3v4Ho90oIP/sPyozxIhWH+mGpq+AphSGYbOSrCbEhIQqU9iW8daBRB3vZRxONy8aHA==",
+>>>>>>> 416e5aa2a7042b34d0e20e4939d9f7c981375ef0
+  "success": true,
+  "projectFilePath": "C:\\Users\\Leonel\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP1\\ISTP12023\\Tienda\\Services\\Services.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Leonel\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP1\\ISTP12023\\Tienda\\Services\\obj\\project.nuget.cache : El proveedor de sincronización en la nube no pudo validar los datos descargados.\r\n"
+    }
+  ]
+}

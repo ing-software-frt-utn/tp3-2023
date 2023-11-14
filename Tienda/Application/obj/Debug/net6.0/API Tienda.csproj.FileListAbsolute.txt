@@ -1,0 +1,68 @@
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\appsettings.json
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.exe
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.deps.json
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.runtimeconfig.json
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.dll
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.pdb
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Domain.dll
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Domain.pdb
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.csproj.AssemblyReference.cache
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.AssemblyInfoInputs.cache
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.AssemblyInfo.cs
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.csproj.CoreCompileInputs.cache
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets\msbuild.API Tienda.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets\msbuild.build.API Tienda.props
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.API Tienda.props
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.API Tienda.props
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\scopedcss\bundle\API Tienda.styles.css
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.csproj.CopyComplete
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.dll
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\refint\API Tienda.dll
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.pdb
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.genruntimeconfig.cache
+C:\Users\Leonel\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\ref\API Tienda.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\appsettings.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.exe
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.deps.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.runtimeconfig.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\API Tienda.pdb
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Domain.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\bin\Debug\net6.0\Domain.pdb
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.csproj.AssemblyReference.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.AssemblyInfoInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.AssemblyInfo.cs
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets\msbuild.API Tienda.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets\msbuild.build.API Tienda.props
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.API Tienda.props
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.API Tienda.props
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\scopedcss\bundle\API Tienda.styles.css
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.csproj.CopyComplete
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\refint\API Tienda.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.pdb
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.genruntimeconfig.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\ref\API Tienda.dll
