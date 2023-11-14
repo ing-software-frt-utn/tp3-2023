@@ -6,10 +6,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.tienda.domain.Articulo;
 import io.cucumber.tienda.domain.Inventario;
+import io.cucumber.tienda.domain.LineaDeVenta;
 import io.cucumber.tienda.domain.Venta;
 import io.cucumber.tienda.repositories.RepositorioArticulo;
 import io.cucumber.tienda.services.ServicioArticulos;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -32,6 +32,8 @@ public class StepDefinitions {
     private ServicioArticulos servicioArticulos;
 
     Articulo art;
+    Articulo articuloVenta;
+    Venta ventaIniciada;
     List<Inventario> inventarioEsperado;
 
     @Before
@@ -43,7 +45,7 @@ public class StepDefinitions {
 
     @Given("una venta en proceso")
     public void una_venta_en_proceso() {
-        Venta venta = new Venta();
+        ventaIniciada = new Venta(null, null);
     }
 
     @Given("un articulo con codigo {int} con los siguientes datos:")
@@ -56,7 +58,7 @@ public class StepDefinitions {
             Double precio = Double.parseDouble(item.get("Precio"));
             articulos.add(new Articulo(codigo,descripcion,marca,categoria,precio));
         }
-
+        articuloVenta = articulos.get(0);
     }
 
     @Given("el inventario disponible para una combinacion de talles y colores para la sucursal {string} es la siguiente:")
@@ -127,4 +129,50 @@ public class StepDefinitions {
         }
     }
 
+    @When("selecciono con cantidad {string} la siguiente combinacion:")
+    public void selecciono_con_cantidad_la_siguiente_combinacion(String cantidad, List<Map<String,String>> tabla) {
+        Map<String, String> item = tabla.get(0);
+        String color = item.get("Color");
+        String talle = item.get("Talle");
+        Double subtotal = (double) (Integer.parseInt(cantidad) * articuloVenta.getPrecio());
+        LineaDeVenta lineaDeVenta = new LineaDeVenta(articuloVenta.getCodigo(),articuloVenta.getDescripcion(),articuloVenta.getPrecio(),color,talle,cantidad,subtotal);
+        ArrayList<LineaDeVenta> lineasSimuladas = new ArrayList<LineaDeVenta>();
+        lineasSimuladas.add(lineaDeVenta);
+
+        Venta ventaSimulado = new Venta(lineasSimuladas,subtotal);
+
+        Mockito.when(respositorioArticulo.agregarLineaDeVenta(ventaIniciada,lineaDeVenta))
+                .thenReturn(ventaSimulado);
+        ventaIniciada = servicioArticulos.agregarArticuloAVenta(ventaIniciada,lineaDeVenta);
+    }
+    @Then("la linea de venta sera de la siguiente manera:")
+    public void la_linea_de_venta_sera_de_la_siguiente_manera(List<Map<String,String>> tabla) {
+        ArrayList<LineaDeVenta> lineaDeVentas = new ArrayList<LineaDeVenta>();
+        for (Map<String,String> item: tabla) {
+            Integer codigo = Integer.parseInt(item.get("Codigo"));
+            String descripcion = item.get("Descripcion");
+            Double precio = Double.parseDouble(item.get("PrecioUnitario"));
+            String color = item.get("Color");
+            String talle = item.get("Talle");
+            String cantidad = item.get("Cantidad");
+            Double subtotal = Double.parseDouble(item.get("Subtotal"));
+
+            lineaDeVentas.add(new LineaDeVenta(codigo,descripcion,precio,color,talle,cantidad,subtotal));
+        }
+
+        LineaDeVenta lineaDeVentaEsperada = lineaDeVentas.get(0);
+        LineaDeVenta lineaDeVentaObtenida = ventaIniciada.getLineaDeVentas().get(0);
+
+        assertEquals(lineaDeVentaEsperada.getCodigo(), lineaDeVentaObtenida.getCodigo());
+        assertEquals(lineaDeVentaEsperada.getCantidad(), lineaDeVentaObtenida.getCantidad());
+        assertEquals(lineaDeVentaEsperada.getColor(), lineaDeVentaObtenida.getColor());
+        assertEquals(lineaDeVentaEsperada.getDescripcion(), lineaDeVentaObtenida.getDescripcion());
+        assertEquals(lineaDeVentaEsperada.getTalle(), lineaDeVentaObtenida.getTalle());
+        assertEquals(lineaDeVentaEsperada.getPrecioUnitario(), lineaDeVentaObtenida.getPrecioUnitario());
+        assertEquals(lineaDeVentaEsperada.getSubtotal(), lineaDeVentaObtenida.getSubtotal());
+    }
+    @Then("el total de la venta sera {double} .")
+    public void el_total_de_la_venta_sera(Double total) {
+        assertEquals(ventaIniciada.getTotal(),total);
+    }
 }
