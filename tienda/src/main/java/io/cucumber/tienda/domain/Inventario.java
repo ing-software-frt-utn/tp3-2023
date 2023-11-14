@@ -8,11 +8,27 @@ public class Inventario {
     private final String cantidad;
 
 
-    public Inventario (String sucursal,String color, String talle, String cantidad){
+    public Inventario (String sucursal, String talle, String color, String cantidad){
 
         this.sucursal = sucursal;
         this.color = color;
         this.talle = talle;
         this.cantidad = cantidad;
+    }
+
+    public String getSucursal() {
+        return sucursal;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getTalle() {
+        return talle;
+    }
+
+    public String getCantidad() {
+        return cantidad;
     }
 }

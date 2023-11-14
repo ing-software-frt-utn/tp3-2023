@@ -1,12 +1,21 @@
 package io.cucumber.tienda;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.tienda.domain.Articulo;
 import io.cucumber.tienda.domain.Inventario;
 import io.cucumber.tienda.domain.Venta;
-import io.cucumber.tienda.services.ServicioBuscarArticulos;
+import io.cucumber.tienda.repositories.RepositorioArticulo;
+import io.cucumber.tienda.services.ServicioArticulos;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +23,23 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(MockitoExtension.class)
 public class StepDefinitions {
+
+    @Mock
+    private RepositorioArticulo respositorioArticulo;
+    @InjectMocks
+    private ServicioArticulos servicioArticulos;
+
     Articulo art;
+    List<Inventario> inventarioEsperado;
+
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+    }
+
+
 
     @Given("una venta en proceso")
     public void una_venta_en_proceso() {
@@ -49,8 +73,17 @@ public class StepDefinitions {
 
     @When("ingreso el codigo del articulo {int}")
     public void ingreso_el_codigo_del_articulo(Integer codigo) {
-        ServicioBuscarArticulos buscarArticulos = new ServicioBuscarArticulos();
-        art = buscarArticulos.buscarArticulos(codigo);
+        Articulo articuloSimulado = new Articulo(codigo,"Camisa Mangas Largas","Polo","Camisas", 1000.00);
+        Mockito.when(respositorioArticulo.buscarArticuloPorCodigo(codigo))
+                .thenReturn(articuloSimulado);
+        art = servicioArticulos.buscarArticulos(codigo);
+        ArrayList<Inventario> inventarioSimulado = new ArrayList<>();
+        inventarioSimulado.add(new Inventario("Centro", "M", "Rojo", "10"));
+        inventarioSimulado.add(new Inventario("Centro", "S", "Rojo", "15"));
+
+        Mockito.when(respositorioArticulo.buscarInventarioPorArticulo(art))
+                .thenReturn(inventarioSimulado);
+        inventarioEsperado = servicioArticulos.buscarInventario(art);
     }
 
     @Then("se obtiene la siguiente informacion del articulo:")
@@ -67,20 +100,31 @@ public class StepDefinitions {
 
         Articulo esperado = articulos.get(0);
 
-        assertEquals(esperado,art);
+        assertEquals(esperado.getCodigo(), art.getCodigo());
+        assertEquals(esperado.getDescripcion(), art.getDescripcion());
+        assertEquals(esperado.getMarca(), art.getMarca());
+        assertEquals(esperado.getCategoria(), art.getCategoria());
+        assertEquals(esperado.getPrecio(), art.getPrecio());
 
     }
 
     @Then("la siguiente informacion del stock:")
-    public void la_siguiente_informacion_del_stock(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte, Short, Long, BigInteger or BigDecimal.
-        //
-        // For other transformations you can register a DataTableType.
-        throw new io.cucumber.java.PendingException();
+    public void la_siguiente_informacion_del_stock(List<Map<String,String>> tabla) {
+        ArrayList<Inventario> inventarios = new ArrayList<Inventario>();
+        for (Map<String,String> item : tabla){
+            String sucursal = item.get("Sucursal");
+            String talle = item.get("Talle");
+            String color = item.get("Color");
+            String cantidad = item.get("Cantidad");
+            inventarios.add(new Inventario(sucursal,talle,color,cantidad));
+        }
+
+        for (int i=0; i<inventarios.size();i++){
+            assertEquals(inventarios.get(i).getSucursal(),inventarioEsperado.get(i).getSucursal());
+            assertEquals(inventarios.get(i).getTalle(),inventarioEsperado.get(i).getTalle());
+            assertEquals(inventarios.get(i).getColor(),inventarioEsperado.get(i).getColor());
+            assertEquals(inventarios.get(i).getCantidad(),inventarioEsperado.get(i).getCantidad());
+        }
     }
 
 }
