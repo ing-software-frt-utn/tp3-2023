@@ -1,13 +1,11 @@
 package io.cucumber.tienda;
 
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.tienda.domain.Articulo;
-import io.cucumber.tienda.domain.Inventario;
-import io.cucumber.tienda.domain.LineaDeVenta;
-import io.cucumber.tienda.domain.Venta;
+import io.cucumber.tienda.domain.*;
 import io.cucumber.tienda.repositories.RepositorioArticulo;
 import io.cucumber.tienda.services.ServicioArticulos;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StepDefinitions {
 
     @Mock
-    private RepositorioArticulo respositorioArticulo;
+    private RepositorioArticulo repositorioArticulo;
     @InjectMocks
     private ServicioArticulos servicioArticulos;
 
@@ -43,7 +41,7 @@ public class StepDefinitions {
 
     @Given("una venta en proceso")
     public void una_venta_en_proceso() {
-        ventaIniciada = new Venta(null);
+        ventaIniciada = new Venta((ArrayList<LineaDeVenta>) null);
     }
 
     @Given("un articulo con codigo {int} con los siguientes datos:")
@@ -74,14 +72,14 @@ public class StepDefinitions {
     @When("ingreso el codigo del articulo {int}")
     public void ingreso_el_codigo_del_articulo(Integer codigo) {
         Articulo articuloSimulado = new Articulo(codigo,"Camisa Mangas Largas","Polo","Camisas", 1000.00);
-        Mockito.when(respositorioArticulo.buscarArticuloPorCodigo(codigo))
+        Mockito.when(repositorioArticulo.buscarArticuloPorCodigo(codigo))
                 .thenReturn(articuloSimulado);
         art = servicioArticulos.buscarArticulos(codigo);
         ArrayList<Inventario> inventarioSimulado = new ArrayList<>();
         inventarioSimulado.add(new Inventario("Centro", "M", "Rojo", "10"));
         inventarioSimulado.add(new Inventario("Centro", "S", "Rojo", "15"));
 
-        Mockito.when(respositorioArticulo.buscarInventarioPorArticulo(art))
+        Mockito.when(repositorioArticulo.buscarInventarioPorArticulo(art))
                 .thenReturn(inventarioSimulado);
         inventarioEsperado = servicioArticulos.buscarInventario(art);
     }
@@ -139,7 +137,7 @@ public class StepDefinitions {
 
         Venta ventaSimulado = new Venta(lineasSimuladas);
 
-        Mockito.when(respositorioArticulo.agregarLineaDeVenta(ventaIniciada,lineaDeVenta))
+        Mockito.when(repositorioArticulo.agregarLineaDeVenta(ventaIniciada,lineaDeVenta))
                 .thenReturn(ventaSimulado);
         ventaIniciada = servicioArticulos.agregarArticuloAVenta(ventaIniciada,lineaDeVenta);
     }
@@ -172,5 +170,38 @@ public class StepDefinitions {
     @Then("el total de la venta sera {double} .")
     public void el_total_de_la_venta_sera(Double total) {
         assertEquals(ventaIniciada.getTotal(),total);
+    }
+
+    // Steps Definitions de AsociarCliente
+
+    Cliente clienteDefecto = new Cliente();
+    Venta ventaAsociada;
+
+    @Given("un cliente con condicion tributaria {string}")
+    public void unClienteConCondicionTributaria(String condTributaria) {
+        CondicionTributaria condicion = new CondicionTributaria(condTributaria);
+        Cliente cliente = new Cliente(condicion);
+    }
+    @And("una venta con cliente con condicion tributaria {string}")
+    public void unaVentaConTipoDeClienteConTipoDeComprobanteAsociado(String tipoCondicion) {
+        clienteDefecto = new Cliente(new CondicionTributaria(tipoCondicion));
+        ventaAsociada = new Venta(clienteDefecto);
+    }
+    @When("modifico la condicion tributaria del cliente en la venta a {string}")
+    public void modificoLaCondicionTributariaDelClienteEnLaVentaA(String condTributariaModificada) {
+        CondicionTributaria condicionTributaria = new CondicionTributaria(condTributariaModificada);
+        ventaAsociada.modificarCondicionTributaria(condicionTributaria);
+    }
+
+    @Then("se asocia la venta al cliente con condicion tributaria {string}")
+    public void seAsociaLaVentaAlClienteConCondicionTributaria(String condTributariaEsperada) {
+        CondicionTributaria condicionTributaria = new CondicionTributaria(condTributariaEsperada);
+        assertEquals(ventaAsociada.getCliente().getCondicionTributaria().getTipo(), condicionTributaria.getTipo());
+    }
+
+    @And("se asocia a la venta el tipo de comprobante {string}")
+    public void seAsociaALaVentaElTipoDeComprobante(String tipoCompEsperado) {
+        Comprobante comprobanteEsperado = new Comprobante(tipoCompEsperado);
+        assertEquals(ventaAsociada.getComprobante().getTipo(), comprobanteEsperado.getTipo());
     }
 }
