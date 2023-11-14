@@ -174,33 +174,25 @@ public class StepDefinitions {
 
     // Steps Definitions de AsociarCliente
 
-    Cliente clienteDefecto = new Cliente();
+    Cliente cliente;
     Venta ventaAsociada;
 
     @Given("un cliente con condicion tributaria {string}")
     public void unClienteConCondicionTributaria(String condTributaria) {
         CondicionTributaria condicion = new CondicionTributaria(condTributaria);
-        Cliente cliente = new Cliente(condicion);
+        cliente = new Cliente(condicion);
     }
-    @And("una venta con cliente con condicion tributaria {string}")
-    public void unaVentaConTipoDeClienteConTipoDeComprobanteAsociado(String tipoCondicion) {
-        clienteDefecto = new Cliente(new CondicionTributaria(tipoCondicion));
-        ventaAsociada = new Venta(clienteDefecto);
+    @And("una venta con el cliente asociado")
+    public void unaVentaConElClienteAsociadoYTipoDeComprobante() {
+        ventaAsociada = new Venta(cliente);
     }
-    @When("modifico la condicion tributaria del cliente en la venta a {string}")
-    public void modificoLaCondicionTributariaDelClienteEnLaVentaA(String condTributariaModificada) {
-        CondicionTributaria condicionTributaria = new CondicionTributaria(condTributariaModificada);
-        ventaAsociada.modificarCondicionTributaria(condicionTributaria);
+    @When("modifico la condicion tributaria del cliente asociado a la venta a {string}")
+    public void modificoLaCondicionTributariaDelClienteAsociadoA(String condTribNueva) {
+        CondicionTributaria condicionTributaria = new CondicionTributaria(condTribNueva);
+        ventaAsociada.modificarCondTribCliente(condicionTributaria);
     }
-
-    @Then("se asocia la venta al cliente con condicion tributaria {string}")
-    public void seAsociaLaVentaAlClienteConCondicionTributaria(String condTributariaEsperada) {
-        CondicionTributaria condicionTributaria = new CondicionTributaria(condTributariaEsperada);
-        assertEquals(ventaAsociada.getCliente().getCondicionTributaria().getTipo(), condicionTributaria.getTipo());
-    }
-
-    @And("se asocia a la venta el tipo de comprobante {string}")
-    public void seAsociaALaVentaElTipoDeComprobante(String tipoCompEsperado) {
+    @Then("se modifica en la venta el tipo de comprobante a {string}")
+    public void seModificaEnLaVentaElTipoDeComprobante(String tipoCompEsperado) {
         Comprobante comprobanteEsperado = new Comprobante(tipoCompEsperado);
         assertEquals(ventaAsociada.getComprobante().getTipo(), comprobanteEsperado.getTipo());
     }
