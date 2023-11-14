@@ -30,12 +30,13 @@ public class ModificacionArticuloSteps {
 
     private Articulo crearArticuloDesdeDataTable(io.cucumber.datatable.DataTable dataTable) {
         java.util.Map<String, String> productoData = dataTable.asMaps(String.class, String.class).get(0);
+        double precio = Double.parseDouble(productoData.get("Precio"));
         return new Articulo(
                 Integer.parseInt(productoData.get("Id")),
                 productoData.get("Descripción"),
                 productoData.get("Marca"),
                 productoData.get("Categoría"),
-                null // Aquí deberías incluir la lógica para obtener el precio del artículo desde la tabla
+                precio
         );
     }
 }
