@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{906D3656-2B85-4FBA-A0FF-AF2294027AFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{906D3656-2B85-4FBA-A0FF-AF2294027AFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{C35C0EF0-DA93-4766-89F1-CF8596C9B6D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{C35C0EF0-DA93-4766-89F1-CF8596C9B6D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{C29F30A7-682F-4C37-9013-8F846FDDB925}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{C29F30A7-682F-4C37-9013-8F846FDDB925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTiendaSpecs", "SpecFlowTiendaSpecs\SpecFlowTiendaSpecs.csproj", "{43A17D21-4922-416A-AD2D-446A957F0922}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlowTiendaSpecs", "SpecFlowTiendaSpecs\SpecFlowTiendaSpecs.csproj", "{43A17D21-4922-416A-AD2D-446A957F0922}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaTest", "TiendaTest\TiendaTest.csproj", "{D75D5DCD-C245-4A4E-82A7-1536C422C113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{43A17D21-4922-416A-AD2D-446A957F0922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43A17D21-4922-416A-AD2D-446A957F0922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43A17D21-4922-416A-AD2D-446A957F0922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D75D5DCD-C245-4A4E-82A7-1536C422C113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D75D5DCD-C245-4A4E-82A7-1536C422C113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D75D5DCD-C245-4A4E-82A7-1536C422C113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D75D5DCD-C245-4A4E-82A7-1536C422C113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

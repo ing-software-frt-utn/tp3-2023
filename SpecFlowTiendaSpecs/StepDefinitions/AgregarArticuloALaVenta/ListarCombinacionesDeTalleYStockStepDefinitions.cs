@@ -5,10 +5,10 @@ using Services.Contracts;
 using System;
 using TechTalk.SpecFlow;
 
-namespace SpecFlowTiendaSpecs.StepDefinitions
+namespace SpecFlowTiendaSpecs.StepDefinitions.AgregarArticuloALaVenta
 {
     [Binding]
-    public class AgregarArticuloALaVentaStepDefinitions
+    public class ListarCombinacionesDeTalleYStockStepDefinitions
     {
         private Mock<IArticuloService> _articuloServiceMock;
         private Mock<IStockService> _stockServiceMock;
@@ -24,7 +24,7 @@ namespace SpecFlowTiendaSpecs.StepDefinitions
         }
 
         [Given(@"una venta en proceso")]
-        public void GivenUnaVentaEnProceso() 
+        public void GivenUnaVentaEnProceso()
         {
             _venta = new Venta();
         }
@@ -54,7 +54,7 @@ namespace SpecFlowTiendaSpecs.StepDefinitions
                 stock = int.Parse(row["Stock"])
             }).ToList();
 
-            // Only stocks greater than zero
+            // Devuelve únicamente stocks mayores a cero
             _stockServiceMock.Setup(m => m.ObtenerStocks(articulo)).Returns(
                 stocks.OrderBy(s => s.stock).Where(s => s.stock > 0).ToList());
         }

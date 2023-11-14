@@ -81,63 +81,6 @@ namespace SpecFlowTiendaSpecs.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Listar la informacion del articulo")]
-        [Xunit.TraitAttribute("FeatureTitle", "Borrar Articulo")]
-        [Xunit.TraitAttribute("Description", "Listar la informacion del articulo")]
-        public virtual void ListarLaInformacionDelArticulo()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Listar la informacion del articulo", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
-    this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Codigo",
-                            "Marca",
-                            "Descripcion"});
-                table5.AddRow(new string[] {
-                            "123",
-                            "Lacoste",
-                            "Remera fachera"});
-#line 9
-        testRunner.Given("existe un articulo con el codigo 123, con la informacion", ((string)(null)), table5, "Given ");
-#line hidden
-#line 12
-        testRunner.When("ingreso el codigo del articulo 123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Codigo",
-                            "Marca",
-                            "Descripcion"});
-                table6.AddRow(new string[] {
-                            "123",
-                            "Lacoste",
-                            "Remera fachera"});
-#line 13
-        testRunner.Then("se muestra la informacion del articulo", ((string)(null)), table6, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
         [Xunit.SkippableFactAttribute(DisplayName="Baja logica de articulo existente")]
         [Xunit.TraitAttribute("FeatureTitle", "Borrar Articulo")]
         [Xunit.TraitAttribute("Description", "Baja logica de articulo existente")]
@@ -146,7 +89,7 @@ namespace SpecFlowTiendaSpecs.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Baja logica de articulo existente", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 18
+#line 7
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -166,16 +109,16 @@ namespace SpecFlowTiendaSpecs.Features
             else
             {
                 this.ScenarioStart();
-#line 19
+#line 8
         testRunner.Given("existe un articulo 123 sin inventarios asociados", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 20
+#line 9
         testRunner.Given("se listo la informacion del articulo 123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 21
+#line 10
         testRunner.When("elimino el articulo 123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 22
+#line 11
         testRunner.Then("el articulo 123 sufre un borrado logico", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
