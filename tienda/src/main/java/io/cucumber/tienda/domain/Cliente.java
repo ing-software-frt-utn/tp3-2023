@@ -5,13 +5,18 @@ public class Cliente {
     private CondicionTributaria condicionTributaria;
 
     public Cliente(String nombre, CondicionTributaria condicionTributaria) {
-        this.condicionTributaria = condicionTributaria;
+        if(condicionTributaria == null){
+            this.condicionTributaria = condicionTributaria;
+        }
+        else {
+            this.condicionTributaria = new CondicionTributaria("Consumidor Final");
+        }
     }
     public Cliente(CondicionTributaria condicionTributaria) {
         this.condicionTributaria = condicionTributaria;
     }
 
-    public Cliente() {
+    public Cliente(){
         this.condicionTributaria = new CondicionTributaria("Consumidor Final");
     }
 
