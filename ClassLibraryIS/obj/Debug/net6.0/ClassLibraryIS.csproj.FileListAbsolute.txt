@@ -1,0 +1,11 @@
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\bin\Debug\net6.0\ClassLibraryIS.deps.json
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\bin\Debug\net6.0\ClassLibraryIS.dll
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\bin\Debug\net6.0\ClassLibraryIS.pdb
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\obj\Debug\net6.0\ClassLibraryIS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\obj\Debug\net6.0\ClassLibraryIS.AssemblyInfoInputs.cache
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\obj\Debug\net6.0\ClassLibraryIS.AssemblyInfo.cs
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\obj\Debug\net6.0\ClassLibraryIS.csproj.CoreCompileInputs.cache
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\obj\Debug\net6.0\ClassLibraryIS.dll
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\obj\Debug\net6.0\refint\ClassLibraryIS.dll
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\obj\Debug\net6.0\ClassLibraryIS.pdb
+C:\Users\Windows 11\OneDrive - frt.utn.edu.ar\utn\4.Cuarto año\2.SegundoCuatrim\PAD\Ecommerce\ClassLibraryIS\ClassLibraryIS\obj\Debug\net6.0\ref\ClassLibraryIS.dll
