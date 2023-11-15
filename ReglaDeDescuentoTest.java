@@ -16,7 +16,11 @@ class ReglaDeDescuentoTest {
         // Then
         Assertions.assertEquals("El total debe ser mayor a 0", thrown.getMessage());
     }
-
+url base + /api/v1/departamentos + /:id/manager
+    url base + /api/v1/departamentos + /:id/manager
+    url base + /api/v1/departamentos + /:id/manager
+    url base + /api/v1/departamentos + /:id/manager
+    url base + /api/v1/departamentos + /:id/manager
     @Test
     void calcularEntre5000y10000() {
         // Given
