@@ -1,0 +1,5 @@
+edu\spring\istfi\model\ClienteTest.class
+edu\spring\istfi\IsTfiApplicationTests.class
+edu\spring\istfi\regladescuento\ReglaDescuentoTest.class
+edu\spring\istfi\servicio\ArticuloServiceTest.class
+edu\spring\istfi\model\ArticuloTest.class
