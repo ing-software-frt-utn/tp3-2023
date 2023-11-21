@@ -15,4 +15,21 @@ public class Inventario {
         this.talle = talle;
         this.cantidad = cantidad;
     }
+    public String getSucursal() {
+        return sucursal;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getTalle() {
+        return talle;
+    }
+
+    public String getCantidad() {
+        return cantidad;
+    }
+
+
 }

@@ -8,7 +8,7 @@ Feature: Buscar articulo y agregarlo a venta.
     And un articulo con codigo 1234 con los siguientes datos:
       | Descripcion          | Marca | Categoria | Precio  |
       | Camisa Mangas Largas | Polo  | Camisas   | 1000.00 |
-    And el inventario disponible para una combinacion de talles y colores para la sucursal "centro" es la siguiente:
+    And el inventario disponible para una combinacion de talles y colores para la sucursal "Centro" es la siguiente:
       | Color | Talle | Stock |
       | Rojo  | M     | 10    |
       | Rojo  | S     | 15    |

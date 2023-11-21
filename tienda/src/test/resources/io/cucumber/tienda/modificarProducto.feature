@@ -6,9 +6,9 @@ Feature: Modificación de un producto
 
   Scenario: Modificación correcta
     Given existe un producto con los siguientes datos:
-      | Id   | Descripción    | Marca         | Categoría      |
-      | 1234 | Pantalón largo | 1 (Taverniti) | 1 (Pantalones) |
+      | Id   | Descripción    | Marca     | Categoría  |
+      | 1234 | Pantalón largo | Taverniti | Pantalones |
     When solicito cambiar la descripción del producto "1234" a "Pantalón de Jean"
     Then se cambian los datos del producto por:
-      | Id   | Descripción      | Marca         | Categoría      |
-      | 1234 | Pantalón de Jean | 1 (Taverniti) | 1 (Pantalones) |
+      | Id   | Descripción      | Marca     | Categoría  |
+      | 1234 | Pantalón de Jean | Taverniti | Pantalones |

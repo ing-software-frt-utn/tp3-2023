@@ -11,6 +11,14 @@ public class InicioSesionSteps {
     private String usuarioRegistrado;
     private String contraseñaRegistrada;
 
+    public String getUsuarioRegistrado() {
+        return usuarioRegistrado;
+    }
+
+    public String getContraseñaRegistrada() {
+        return contraseñaRegistrada;
+    }
+
     @Given("un punto de venta válido sin sesión iniciada")
     public void puntoDeVentaSinSesion() {
         sesionIniciada = false;

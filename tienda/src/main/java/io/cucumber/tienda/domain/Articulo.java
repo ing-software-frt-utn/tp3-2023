@@ -14,6 +14,15 @@ public class Articulo {
         this.categoria = categoria;
         this.precio = precio;
     }
+
+    public Articulo(Integer id, String descripcion, String marca, String categoria) {
+        this.codigo = id;
+        this.descripcion = descripcion;
+        this.marca = marca;
+        this.categoria = categoria;
+        this.precio = null;
+    }
+
     public Integer getCodigo() {
         return codigo;
     }

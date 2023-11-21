@@ -4,15 +4,36 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import io.cucumber.tienda.domain.Articulo;
+import org.junit.runner.RunWith;
+
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class ModificacionArticuloSteps {
     private Articulo articulo;
 
     @Given("existe un producto con los siguientes datos:")
-    public void productoExistente(io.cucumber.datatable.DataTable dataTable) {
-        articulo = crearArticuloDesdeDataTable(dataTable);
-        // Lógica para establecer el artículo existente (por ejemplo, en la base de datos)
+    public void productoExistente(List<Map<String, String>> tabla) {
+        ArrayList<Articulo> articulos = new ArrayList<Articulo>();
+        for(Map<String,String> item:tabla){
+            Integer id = Integer.parseInt(item.get("Id"));
+            String descripcion = item.get("Descripción");
+            String marca = item.get("Marca");
+            String categoria = item.get("Categoría");
+            articulos.add(new Articulo(id, descripcion, marca, categoria));
+        }
+        articulo = articulos.get(0);
     }
 
     @When("solicito cambiar la descripción del producto {string} a {string}")
@@ -23,20 +44,16 @@ public class ModificacionArticuloSteps {
     }
 
     @Then("se cambian los datos del producto por:")
-    public void datosArticuloModificados(io.cucumber.datatable.DataTable dataTable) {
-        Articulo articuloModificado = crearArticuloDesdeDataTable(dataTable);
+    public void datosArticuloModificados(List<Map<String, String>> tabla) {
+        ArrayList<Articulo> articulos = new ArrayList<Articulo>();
+        for(Map<String,String> item:tabla){
+            Integer id = Integer.parseInt(item.get("Id"));
+            String descripcion = item.get("Descripción");
+            String marca = item.get("Marca");
+            String categoria = item.get("Categoría");
+            articulos.add(new Articulo(id, descripcion, marca, categoria));
+        }
+        Articulo articuloModificado = articulos.get(0);
         assertEquals(articuloModificado, articulo);
-    }
-
-    private Articulo crearArticuloDesdeDataTable(io.cucumber.datatable.DataTable dataTable) {
-        java.util.Map<String, String> productoData = dataTable.asMaps(String.class, String.class).get(0);
-        double precio = Double.parseDouble(productoData.get("Precio"));
-        return new Articulo(
-                Integer.parseInt(productoData.get("Id")),
-                productoData.get("Descripción"),
-                productoData.get("Marca"),
-                productoData.get("Categoría"),
-                precio
-        );
     }
 }
