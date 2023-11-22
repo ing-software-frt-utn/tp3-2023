@@ -3,28 +3,20 @@ package io.cucumber.skeleton;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.skeleton.domain.Cliente;
+import io.cucumber.skeleton.domain.Venta;
 
 public class IniciarVentaStepDefinition {
-    @Given("un cliente {string} {string} con {string} DNI")
-    public void un_cliente_con_dni(String string, String string2, String string3) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Given("un cliente con nombre {string} y condición tributaria {string} con DNI {string}")
+    public void un_cliente_con_nombre_y_condición_tributaria_con_dni(String nombre, String condicionTributaria, String dni) {
+        Cliente cliente = new Cliente(nombre, condicionTributaria, dni);
     }
-
-    @When("inicia una nueva venta como {string} consumidor final")
-    public void inicia_una_nueva_venta_como_consumidor_final(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("el vendedor inicia una nueva venta para el cliente con condición tributaria {string}")
+    public void el_vendedor_inicia_una_nueva_venta_para_el_cliente_con_condición_tributaria(String string) {
+        Venta venta = new Venta();
     }
-
-    @Then("se crea una nueva venta")
-    public void se_crea_una_nueva_venta() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @Then("la nueva venta es asociada a los datos del cliente nuevo")
-    public void la_nueva_venta_es_asociada_a_los_datos_del_cliente_nuevo(io.cucumber.datatable.DataTable dataTable) {
+    @Then("la nueva venta está asociada a los datos del cliente nuevo")
+    public void la_nueva_venta_está_asociada_a_los_datos_del_cliente_nuevo(io.cucumber.datatable.DataTable dataTable) {
         // Write code here that turns the phrase above into concrete actions
         // For automatic transformation, change DataTable to one of
         // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
@@ -34,6 +26,5 @@ public class IniciarVentaStepDefinition {
         // For other transformations you can register a DataTableType.
         throw new io.cucumber.java.PendingException();
     }
-
 
 }

@@ -1,5 +1,7 @@
 Feature: Buscar Cliente por DNI
-    "Como vendedor, quiero buscar un cliente registrado por DNI para iniciar la venta."
+    Como vendedor
+    Quiero buscar un cliente registrado por DNI
+    Para iniciar la venta
 
     Scenario: Cliente encontrado
         Given una venta iniciada
