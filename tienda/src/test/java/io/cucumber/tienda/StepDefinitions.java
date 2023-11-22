@@ -171,29 +171,4 @@ public class StepDefinitions {
     public void el_total_de_la_venta_sera(Double total) {
         assertEquals(ventaIniciada.getTotal(),total);
     }
-
-    // Steps Definitions de AsociarCliente
-
-    Cliente cliente;
-    Venta ventaAsociada;
-
-    @Given("un cliente con condicion tributaria {string}")
-    public void unClienteConCondicionTributaria(String condTributaria) {
-        CondicionTributaria condicion = new CondicionTributaria(condTributaria);
-        cliente = new Cliente(condicion);
-    }
-    @And("una venta con el cliente asociado")
-    public void unaVentaConElClienteAsociadoYTipoDeComprobante() {
-        ventaAsociada = new Venta(cliente);
-    }
-    @When("modifico la condicion tributaria del cliente asociado a la venta a {string}")
-    public void modificoLaCondicionTributariaDelClienteAsociadoA(String condTribNueva) {
-        CondicionTributaria condicionTributaria = new CondicionTributaria(condTribNueva);
-        ventaAsociada.modificarCondTribCliente(condicionTributaria);
-    }
-    @Then("se modifica en la venta el tipo de comprobante a {string}")
-    public void seModificaEnLaVentaElTipoDeComprobante(String tipoCompEsperado) {
-        Comprobante comprobanteEsperado = new Comprobante(tipoCompEsperado);
-        assertEquals(ventaAsociada.getComprobante().getTipo(), comprobanteEsperado.getTipo());
-    }
 }
