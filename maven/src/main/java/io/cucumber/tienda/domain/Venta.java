@@ -4,14 +4,19 @@ public class Venta {
 
     private Cliente cliente;
     private String estado;
+    private List<LineaVenta> lineasVenta;
 
     // Constructor
     public Venta() {
+
         this.estado = "pendiente";
+        this.lineasVenta = new ArrayList<>();
+
     }
     public Venta(Cliente cliente) {
         this.cliente = cliente;
         this.estado = "pendiente";
+        this.lineasVenta = new ArrayList<>();
     }
 
     public Cliente getCliente() {

@@ -8,7 +8,9 @@ public class AgregarArticuloStepDefinitions {
 
     private Venta venta;
     private Articulo articuloSeleccionado;
-    private LineaVenta lineaVenta;
+    private String talle;
+    private String color;
+    private int stock;
 
     @Given("existe una venta en proceso")
     public void existe_una_venta_en_proceso() {
@@ -34,18 +36,25 @@ public class AgregarArticuloStepDefinitions {
 
     @When("selecciona")
     public void selecciona(io.cucumber.datatable.DataTable dataTable) {
+        Map<String, String> seleccionData = dataTable.asMap(String.class, String.class);
 
+        String talleSeleccionado = seleccionData.get("talle");
+        String colorSeleccionado = seleccionData.get("color");
+        int stockSeleccionado = Integer.parseInt(seleccionData.get("stock"));
+
+        LineaVenta lineaVenta = new LineaVenta(articuloSeleccionado, talleSeleccionado, colorSeleccionado, stockSeleccionado);
+        venta.addLineaVenta(lineaVenta);
     }
 
     @Then("se agrega la seleccion a la linea de venta")
     public void se_agrega_la_seleccion_a_la_linea_de_venta() {
-        
+        assertEquals(1, venta.getLineasVenta().size());
     }
 
     @And("se muestra el sub total correspondiente")
     public void se_muestra_el_sub_total_correspondiente() {
 
-
+        double total = venta.calcularTotal();
 
     }
 }
