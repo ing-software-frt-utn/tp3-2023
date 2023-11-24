@@ -1,10 +1,10 @@
 package io.cucumber.tienda.services;
 
 import io.cucumber.tienda.domain.Cliente;
+import io.cucumber.tienda.domain.Venta;
 
 public interface ServicioVenta {
-    void iniciarNuevaVenta();
-    void asociarClienteConVenta(Cliente cliente);
-    void asociarComprobante();
-    // Otros métodos relacionados con la gestión de ventas
+    void iniciarNuevaVenta(Cliente cliente);
+
+    Venta getVentaActual();
 }

@@ -10,4 +10,4 @@ Feature: Verificar Cliente
       | generico | 11111111 |         CF           |
     When se inicia una nueva venta
     Then se asocia a la venta el cliente con dni '11111111'
-    And se asocia comprobante Factura B
+
