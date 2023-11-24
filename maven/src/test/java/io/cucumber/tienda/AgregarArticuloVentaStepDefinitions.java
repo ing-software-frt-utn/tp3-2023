@@ -1,8 +1,16 @@
+package io.cucumber.tienda;
+
+import io.cucumber.tienda.domain.*;
+import io.cucumber.tienda.services.*;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.And;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AgregarArticuloStepDefinitions {
 

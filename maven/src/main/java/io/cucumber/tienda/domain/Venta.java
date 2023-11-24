@@ -27,5 +27,7 @@ public class Venta {
         this.cliente = cliente;
     }
 
-
+    public void addLineaVenta(LineaVenta lineaVenta) {
+        lineasVenta.add(lineaVenta);
+    }
 }
