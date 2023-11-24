@@ -54,7 +54,7 @@ public class AgregarArticuloStepDefinitions {
     @And("se muestra el sub total correspondiente")
     public void se_muestra_el_sub_total_correspondiente() {
 
-        double total = venta.calcularTotal();
+        double subTotal = venta.getLineasVenta().get(0).calcularSubtotal();
 
     }
 }
