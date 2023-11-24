@@ -6,12 +6,13 @@ import io.cucumber.tienda.services.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import io.cucumber.tienda.services.ServicioVenta;
 
 import java.util.List;
 import java.util.Map;
 
-public class StepDefinitions {
+import static org.junit.jupiter.api.Assertions.*;
+
+public class IniciarVentaStepDefinitions {
 
     Cliente cliente;
     ServicioVentaImpl servicioVenta = new ServicioVentaImpl();
@@ -33,20 +34,22 @@ public class StepDefinitions {
     public void se_inicia_una_nueva_venta() {
 
 
-        servicioVenta.iniciarNuevaVenta();
+        servicioVenta.iniciarNuevaVenta(cliente);
 
     }
 
     @Then("se asocia a la venta el cliente con dni {string}")
     public void se_asocia_a_la_venta_el_cliente_con_dni(String string) {
 
-        servicioVenta.asociarClienteConVenta(cliente);
+        //existe la venta
+        assertNotNull(servicioVenta.getVentaActual());
+        //existe un cliente en la venta
+        assertNotNull(servicioVenta.getVentaActual().getCliente());
+        //el cliente es el generico
+        assertTrue(servicioVenta.getVentaActual().getCliente().equals(cliente));
 
     }
 
-    @Then("se asocia comprobante Factura B")
-    public void se_asocia_comprobante_factura_b() {
-        servicioVenta.asociarComprobante();
     }
-    }
+
 
