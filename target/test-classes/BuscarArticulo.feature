@@ -1,5 +1,5 @@
 Feature: Buscar articulo
-  Yo como vendedor
+  Como vendedor
   Quiero buscar un articulo
   Para conocer su stock
 

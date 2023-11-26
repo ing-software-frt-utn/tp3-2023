@@ -4,6 +4,6 @@ public enum EstadoVenta {
     PENDIENTE,
     APROBADA,
     RECHAZADA,
-    APROBADACONOBSERVACIONES
+    COMPLETADA
 
 }

@@ -1,15 +1,18 @@
 package domain;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Venta {
 
+    private Double montoVenta;
     private EstadoVenta estadoVenta;
 
 
     public Venta(){
-
-
     }
-    public Venta(EstadoVenta estadoVenta){
+
+
+    public void setEstadoVenta(EstadoVenta estadoVenta) {
         this.estadoVenta = estadoVenta;
     }
 
@@ -17,8 +20,13 @@ public class Venta {
         return estadoVenta;
     }
 
-    public void setEstadoVenta(EstadoVenta estadoVenta) {
-        this.estadoVenta = estadoVenta;
+    public Double getMontoVenta() {
+        return montoVenta;
+    }
+
+    public void AutorizacionAFIP(Boolean respuesta){
+        if (respuesta.equals(true))this.estadoVenta = EstadoVenta.APROBADA;
+        else this.estadoVenta = EstadoVenta.RECHAZADA;
     }
 
 }

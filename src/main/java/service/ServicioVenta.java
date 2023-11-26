@@ -1,22 +1,22 @@
 package service;
+import adapter.AdaptadorVenta;
 import domain.Venta;
-import repositorie.IRepositorioVenta;
 
-public class ServicioVenta implements IRepositorioVenta {
+public class ServicioVenta implements AdaptadorVenta {
 
-    private final IRepositorioVenta repositorio;
+    private final AdaptadorVenta adaptadorVenta;
 
-    public ServicioVenta(IRepositorioVenta repositorio) {
-        this.repositorio = repositorio;
+    public ServicioVenta(AdaptadorVenta adaptadorVenta) {
+        this.adaptadorVenta = adaptadorVenta;
     }
 
     @Override
     public Boolean SolicitarAutorizacionVentaAFIP(Venta venta) {
-        return repositorio.SolicitarAutorizacionVentaAFIP(venta);
+        return adaptadorVenta.SolicitarAutorizacionVentaAFIP(venta);
     }
 
     @Override
-    public Venta RecibirResultadoAFIP(String respuesta) {
-        return repositorio.RecibirResultadoAFIP(respuesta);
+    public Boolean RecibirResultadoAFIP(String respuesta) {
+        return adaptadorVenta.RecibirResultadoAFIP(respuesta);
     }
 }
