@@ -42,8 +42,8 @@ public class StepDefinitionsEliminar_linea_venta {
 
 
 
-    @Given("una venta en curso en la sucursal: {string} con dos articulos con los siguientes datos:")
-    public void una_venta_en_curso_en_la_sucursal_con_dos_articulos_con_los_siguientes_datos(String sucursal, List<Map<String, String>> tabla) {
+    @Given("una venta en curso con dos articulos con los siguientes datos:")
+    public void una_venta_en_curso_con_dos_articulos_con_los_siguientes_datos(List<Map<String, String>> tabla) {
 
         venta = new Venta();
 
@@ -57,6 +57,7 @@ public class StepDefinitionsEliminar_linea_venta {
             String color = fila.get("Color");
             String talle = fila.get("Talle");
             Integer stock = Integer.parseInt(fila.get("Stock"));
+            String sucursal = fila.get("Sucursal");
 
             articulo = new Articulo(codigo, marca, descripcion, precio, color, talle, stock, sucursal);
 

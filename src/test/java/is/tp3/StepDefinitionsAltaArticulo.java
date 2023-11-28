@@ -56,8 +56,8 @@ public class StepDefinitionsAltaArticulo {
 
         // when(repositorioMock.buscarCliente(anyInt())).thenReturn(clientes.get(0));
     }
-    @Given("que hay un artículo en la sucursal {string} con los siguientes atributos:")
-    public void que_hay_un_artículo_en_la_sucursal_con_los_siguientes_atributos(String sucursal, List<Map<String, String>> tabla) {
+    @Given("que hay un artículo con los siguientes atributos:")
+    public void que_hay_un_artículo_con_los_siguientes_atributos(List<Map<String, String>> tabla) {
         articulos = new ArrayList<Articulo>();
         for (Map<String, String> fila : tabla) {
             Integer codigo = Integer.parseInt(fila.get("Codigo"));
@@ -67,6 +67,7 @@ public class StepDefinitionsAltaArticulo {
             String color = fila.get("Color");
             String talle = fila.get("Talle");
             Integer stock = Integer.parseInt(fila.get("Stock"));
+            String sucursal = fila.get("Sucursal");
 
 
             articulos.add(new Articulo(codigo, marca, descripcion, precio, color, talle, stock, sucursal));

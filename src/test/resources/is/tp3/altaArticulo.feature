@@ -4,9 +4,9 @@ Feature: Agregar articulos a la venta
 
   Scenario: Se agrega un articulo a la venta
 
-    Given que hay un artículo en la sucursal "Sucursal1" con los siguientes atributos:
-      | Codigo | Marca | Descripcion | Precio | Color | Talle | Stock |
-      |  123   | Lacoste | Camisa    | 1200.0   | Azul  | xl  | 5   |
+    Given que hay un artículo con los siguientes atributos:
+      | Codigo | Marca | Descripcion | Precio | Color | Talle | Stock | Sucursal |
+      |  123   | Lacoste | Camisa    | 1200.0   | Azul  | xl  | 5   | Sucursal1  |
 
 
     And hay una venta en curso
