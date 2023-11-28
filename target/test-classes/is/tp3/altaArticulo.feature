@@ -11,7 +11,7 @@ Feature: Agregar articulos a la venta
 
     And hay una venta en curso
 
-    When se agrega 2 unidades del articulo con codigo: 123, color: "Azul", talle: "xl" a la venta
+    When se agregan 2 unidades del articulo con codigo 123
 
     Then se crea en la venta una linea de venta con el articulo de codigo: 123, color: "Azul", talle: "xl" y cantidad: 2
 

@@ -9,13 +9,34 @@ public class Venta {
 
     private ArrayList<LineaDeVenta> lineasDeVentas = new ArrayList<LineaDeVenta>();
 
-    public void agregarArticulo(Articulo articulo, Integer cantidad) {
+    public String agregarArticulo(Articulo articulo, Integer cantidad) {
+
+        if (cantidad <= articulo.getStock()){
 
         LineaDeVenta lineaDeVenta = new LineaDeVenta();
 
         lineaDeVenta.agregarArticuloALineaDeVenta(cantidad, articulo);
 
         lineasDeVentas.add(lineaDeVenta);
+
+        return "Se agrego el articulo con exito";
+        }else{
+            return "No hay suficiente stock";
+        }
+        /*
+        try {
+            // Código que podría lanzar una excepción
+            LineaDeVenta lineaDeVenta = new LineaDeVenta();
+
+            lineaDeVenta.agregarArticuloALineaDeVenta(cantidad, articulo);
+
+            lineasDeVentas.add(lineaDeVenta);
+            System.out.println("Se agrego el articulo en la venta: ");
+        } catch (Exception e) {
+            throw new Exception("No se encontró el artículo");
+
+        }
+*/
 
     }
 

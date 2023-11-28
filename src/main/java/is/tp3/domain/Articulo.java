@@ -30,6 +30,10 @@ public class Articulo {
         return codigo;
     }
 
+    public Integer getStock() {
+        return stock;
+    }
+
     public String getMarca() {
         return marca;
     }

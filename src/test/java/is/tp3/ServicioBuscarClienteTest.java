@@ -32,6 +32,9 @@ public class ServicioBuscarClienteTest {
 
         verify(repositorioMock);
         assertNotNull(resultado);
-        assertEquals(esperado, resultado);
+        assertEquals(esperado.dni, resultado.dni);
+        assertEquals(esperado.nombre, resultado.nombre);
     }
+
+
 }
