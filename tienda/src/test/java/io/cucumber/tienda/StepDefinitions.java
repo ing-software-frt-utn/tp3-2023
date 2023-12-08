@@ -66,7 +66,6 @@ public class StepDefinitions {
             String cantidad = item.get("Cantidad");
             inventarios.add(new Inventario(sucursal,talle,color,cantidad));
         }
-
     }
 
     @When("ingreso el codigo del articulo {int}")
@@ -75,10 +74,10 @@ public class StepDefinitions {
         Mockito.when(repositorioArticulo.buscarArticuloPorCodigo(codigo))
                 .thenReturn(articuloSimulado);
         art = servicioArticulos.buscarArticulos(codigo);
+
         ArrayList<Inventario> inventarioSimulado = new ArrayList<>();
         inventarioSimulado.add(new Inventario("Centro", "M", "Rojo", "10"));
         inventarioSimulado.add(new Inventario("Centro", "S", "Rojo", "15"));
-
         Mockito.when(repositorioArticulo.buscarInventarioPorArticulo(art))
                 .thenReturn(inventarioSimulado);
         inventarioEsperado = servicioArticulos.buscarInventario(art);

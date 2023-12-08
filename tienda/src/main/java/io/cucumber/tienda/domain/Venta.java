@@ -34,8 +34,13 @@ public class Venta {
         this.cliente = cliente;
         this.comprobante = new Comprobante(this.cliente);
     }
-    public void modificarCondTribCliente(CondicionTributaria nuevaCondicionTributaria) {
-        this.cliente.setCondicionTributaria(nuevaCondicionTributaria);
+
+    public void modificarCliente(Cliente nuevoCliente) {
+        this.cliente = nuevoCliente;
+        modificarComprobante(nuevoCliente.getCondicionTributaria());
+    }
+
+    private void modificarComprobante(CondicionTributaria nuevaCondicionTributaria) {
         this.comprobante = new Comprobante(this.cliente);
     }
 
