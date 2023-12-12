@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ojeoM+KlF2Qsbuo99HoJDpuJT9xmD5ibfN2XlozsHSmsh7qRT1ulqpHPLf50dgpdLpYqhxY6/P/OVOpN212noA==",
+  "dgSpecHash": "F1qMgZD+Y5Aaw4yiC79k5LX4UatnFtfmAwQqC6msftyGSBled197tQ8dZJ1Mq6XLnPofLRe6bVnP6MMzEulbZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\matia\\OneDrive\\Documentos\\Programación\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP1\\ISTP12023\\Tienda\\SpecFlowasd\\SpecFlowasd.csproj",
+  "projectFilePath": "C:\\Users\\matia\\OneDrive\\Documentos\\Programación\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP3\\tp3-2023\\Tienda\\SpecFlowasd\\SpecFlowasd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matia\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\matia\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

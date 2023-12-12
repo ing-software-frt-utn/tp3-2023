@@ -75,6 +75,27 @@ namespace SpecFlowasd.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 3
+ #line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "dni",
+                        "condicion tributaria",
+                        "cuit"});
+            table1.AddRow(new string[] {
+                        "0",
+                        "CF",
+                        "00-00000000-0"});
+            table1.AddRow(new string[] {
+                        "12345678",
+                        "RI",
+                        "20-12345678-0"});
+#line 4
+  testRunner.Given("los siguientes clientes registrados:", ((string)(null)), table1, "Given ");
+#line hidden
+        }
+        
         void System.IDisposable.Dispose()
         {
             this.TestTearDown();
@@ -88,8 +109,8 @@ namespace SpecFlowasd.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Asociar cliente existente", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 3
-  this.ScenarioInitialize(scenarioInfo);
+#line 11
+ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -108,38 +129,66 @@ namespace SpecFlowasd.Features
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "IdVenta",
-                            "LineaDeVenta"});
-                table1.AddRow(new string[] {
-                            "1",
-                            "123"});
-                table1.AddRow(new string[] {
-                            "1",
-                            "124"});
-#line 4
-    testRunner.Given("una venta con IdVenta 1:", ((string)(null)), table1, "Given ");
-#line hidden
-#line 9
-    testRunner.And("un cliente registrado con el dni 9999", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 10
-    testRunner.When("el vendedor asocia el cliente con DNI: 9999 a la venta con idVenta: 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 3
+ this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "IdVenta",
-                            "LineaDeVenta",
-                            "Cliente"});
+                            "cliente asociado"});
                 table2.AddRow(new string[] {
-                            "1",
-                            "123",
-                            "9999"});
-                table2.AddRow(new string[] {
-                            "1",
-                            "124",
-                            "9999"});
-#line 11
-    testRunner.Then("se muestra la venta 1 con el cliente 9999 asociado", ((string)(null)), table2, "Then ");
+                            "00000000"});
+#line 12
+  testRunner.Given("una venta en curso con la siguiente informacion:", ((string)(null)), table2, "Given ");
+#line hidden
+#line 15
+  testRunner.When("ingreso el DNI del cliente 12345678", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "cliente asociado"});
+                table3.AddRow(new string[] {
+                            "12345678"});
+#line 16
+  testRunner.Then("se asocia el cliente a la venta.", ((string)(null)), table3, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Cliente no existente")]
+        [Xunit.TraitAttribute("FeatureTitle", "Asociar Cliente")]
+        [Xunit.TraitAttribute("Description", "Cliente no existente")]
+        public virtual void ClienteNoExistente()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cliente no existente", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 20
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+ this.FeatureBackground();
+#line hidden
+#line 21
+  testRunner.When("ingreso el DNI del cliente 87654321", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 22
+  testRunner.Then("se muestra el mensaje \"Cliente inexistente\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

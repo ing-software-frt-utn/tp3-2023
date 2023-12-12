@@ -11,9 +11,10 @@ namespace Services.Interfaces
     {
         public List<Venta> GetVentasPorCliente(int id);
         public Venta GetVentaById(int id);
-        public Venta CrearVenta();
+        public Venta CreateVenta();
+        public void AsociarCliente(int idCliente, int idVenta);
         public void ProcesarPago();
-        public void AsociarCliente(int idCliente);
+        
     }
 }
     

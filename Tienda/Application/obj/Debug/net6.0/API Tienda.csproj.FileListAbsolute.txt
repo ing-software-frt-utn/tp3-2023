@@ -66,3 +66,13 @@ C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to añ
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.pdb
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\API Tienda.genruntimeconfig.cache
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Application\obj\Debug\net6.0\ref\API Tienda.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.csproj.AssemblyReference.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.AssemblyInfoInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.AssemblyInfo.cs
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\refint\API Tienda.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Application\obj\Debug\net6.0\API Tienda.pdb

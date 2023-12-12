@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matia\\OneDrive\\Documentos\\Programación\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP1\\ISTP12023\\Tienda\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\matia\\OneDrive\\Documentos\\Programación\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP3\\tp3-2023\\Tienda\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\matia\\OneDrive\\Documentos\\Programación\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP1\\ISTP12023\\Tienda\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\matia\\OneDrive\\Documentos\\Programación\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP3\\tp3-2023\\Tienda\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matia\\OneDrive\\Documentos\\Programación\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP1\\ISTP12023\\Tienda\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\matia\\OneDrive\\Documentos\\Programación\\OneDrive\\Documentos\\UTN\\4to año\\Ingeniería de software\\2023\\TP3\\tp3-2023\\Tienda\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config",

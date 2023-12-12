@@ -22,3 +22,15 @@ C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to añ
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Infrastructure\obj\Debug\net6.0\refint\Data.dll
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Infrastructure\obj\Debug\net6.0\Data.pdb
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Infrastructure\obj\Debug\net6.0\ref\Data.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\bin\Debug\net6.0\Data.deps.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\bin\Debug\net6.0\Data.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\bin\Debug\net6.0\Data.pdb
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\Data.AssemblyInfo.cs
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\Data.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\refint\Data.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\Data.pdb
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Infrastructure\obj\Debug\net6.0\ref\Data.dll

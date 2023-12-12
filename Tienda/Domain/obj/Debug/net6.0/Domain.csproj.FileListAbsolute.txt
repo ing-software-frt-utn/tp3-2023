@@ -22,3 +22,15 @@ C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to añ
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Domain\obj\Debug\net6.0\refint\Domain.dll
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Domain\obj\Debug\net6.0\Domain.pdb
 C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP1\ISTP12023\Tienda\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\matia\OneDrive\Documentos\Programación\OneDrive\Documentos\UTN\4to año\Ingeniería de software\2023\TP3\tp3-2023\Tienda\Domain\obj\Debug\net6.0\ref\Domain.dll

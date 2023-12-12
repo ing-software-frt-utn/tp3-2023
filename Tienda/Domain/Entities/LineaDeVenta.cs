@@ -13,6 +13,7 @@ namespace Domain.Entities
         public Articulo Articulo { get; set; }
         //public int Talle 
         public int CantidadArticulo { get; set; }
+        
 
     }
 }

@@ -17,11 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API Tienda", "Application\A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{54ADFFE2-81C0-499A-B7F3-655556C9FB1A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{B8FCE28A-EB08-422F-AC94-85DF3A5EA887}"
-	ProjectSection(SolutionItems) = preProject
-		IS2023_4k1_G22_TP3_V0.pdf = IS2023_4k1_G22_TP3_V0.pdf
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,139 +1,91 @@
-ï»¿using Domain.Entities;
+using Domain.Entities;
 using Domain.Interfaces;
 using Moq;
+using Services;
 using Services.Interfaces;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace SpecFlowasd.StepDefinitions
 {
     [Binding]
     public class AsociarClienteStepDefinitions
     {
-        private Venta venta;
-        private Cliente cliente;
-        private ICollection<Cliente> clientes = new List<Cliente>();
+        private Venta venta = new Venta();
+        private Cliente cliente = new Cliente();
         private Mock<IGenericRepository<Venta>> ventaRepositoryMock;
         private Mock<IGenericRepository<Cliente>> clienteRepositoryMock;
+        private Mock<IClienteService> clienteServiceMock;
         private Mock<IVentaService> ventaServiceMock;
+        private string mensajeMostrado;
 
-        [BeforeScenario]
-        public void Setup()
+
+
+
+        [Given(@"una venta en curso con la siguiente informacion:")]
+        public void GivenUnaVentaEnCursoConLaSiguienteInformacion(Table table)
         {
-            ventaRepositoryMock = new Mock<IGenericRepository<Venta>>();
-            clienteRepositoryMock = new Mock<IGenericRepository<Cliente>>();
-            ventaServiceMock = new Mock<IVentaService>();
+            venta.Cliente.Id = int.Parse(table.Rows[0]["cliente asociado"]);
         }
 
-        [Given(@"una venta con IdVenta (.*):")]
-        public void GivenUnaVentaConIdVenta(int idVenta, Table table )
-        {
-            venta = new Venta { Id = idVenta, LineasDeVenta = new List<LineaDeVenta>() };
-            foreach (var row in table.Rows)
-            {
-                int Id = int.Parse(row["LineaDeVenta"]);
-                LineaDeVenta lineaDeVenta = new LineaDeVenta { Id = Id };
-                venta.LineasDeVenta.Add(lineaDeVenta);
-            }
-            ventaServiceMock.Setup(service => service.GetVentaById(idVenta)).Returns(venta);
-        }
-
-
-
-        [Given(@"un cliente registrado con el dni (.*)")]
-        public void GivenUnClienteRegistradoConElDNI(int dni)
-        {
-            cliente = new Cliente { Id = dni};
-            clienteRepositoryMock.Setup(clienteRepositoryMock => clienteRepositoryMock.GetAsync(dni)).ReturnsAsync(cliente);
-        }
-
-
-        [When(@"el vendedor asocia el cliente con DNI: (.*) a la venta con idVenta: (.*)")]
-        public void WhenElVendedorAsociaElClienteConDNIALaVentaConIdVenta(int dni, int idVenta)
-        {
-            ventaServiceMock.Setup(service => service.AsociarCliente(dni))
-                   .Callback<int>(async (clienteDni) =>
-                   {
-                       var venta = await ventaRepositoryMock.Object.GetAsync(idVenta);
-
-                       var cliente = await clienteRepositoryMock.Object.GetAsync(clienteDni);
-
-                       venta.Cliente = cliente;
-
-                       await ventaRepositoryMock.Object.UpdateAsync(venta);
-                   });
-        }
-
-        [Then(@"se muestra la venta (.*) con el cliente (.*) asociado")]
-        public void ThenSeMuestraLaVentaConElClienteAsociado(int idVenta, int idCliente, Table table)
-        {
-            cliente.Id = idCliente;
-            venta.Cliente = cliente;
-
-            ventaServiceMock.Setup(service => service.GetVentaById(idVenta))
-                .Returns((int id) =>
-                {
-                    var ventaSimulada = new Venta
-                    {
-                        Id = idVenta,
-                        Cliente = cliente,
-                        LineasDeVenta = table.Rows.Select(row =>
-                           new LineaDeVenta
-                            {
-                               Id = int.Parse(row["LineaDeVenta"])
-                            }).ToList()
-                    };
-                    return ventaSimulada;
-                });
-
-            var ventaDespuesAsociacion = ventaServiceMock.Object.GetVentaById(idVenta);
-
-            Assert.NotNull(ventaDespuesAsociacion);
-
-            Assert.Equal(idCliente, ventaDespuesAsociacion.Cliente.Id);
-            Assert.Equal(idVenta, ventaDespuesAsociacion.Id);
+        [Given(@"los siguientes clientes registrados:")]
+        public void GivenLosSiguientesClientesRegistrados(Table table)
+        {   
+            List<Cliente> clientes = new List<Cliente>();
 
             foreach (var row in table.Rows)
             {
-                int lineaDeVentaId = int.Parse(row["LineaDeVenta"]);
-                Assert.Equal(lineaDeVentaId, ventaDespuesAsociacion.LineasDeVenta.Single(l => l.Id == lineaDeVentaId).Id);
-            }
-        }
-
-        [Given(@"los cliente registrados")]
-        public void GivenLosClienteRegistradosConElDni(Table table)
-        {
-            foreach (var row in table.Rows)
-            {
-                Cliente cliente = new Cliente { Id = int.Parse(row["dni"]) };
+                Cliente cliente = new Cliente();
+                cliente.Dni = int.Parse(row["dni"]);
+                cliente.CondicionTributaria = (CondicionTributaria)Enum.Parse(typeof(CondicionTributaria), row["condicion tributaria"], true);
+                cliente.Cuit = row["cuit"];
                 clientes.Add(cliente);
             }
-            clienteRepositoryMock.Setup(clienteRepositoryMock => clienteRepositoryMock.GetAllAsync()).ReturnsAsync(clientes);
-            var clientesMock = clienteRepositoryMock.Object.GetAllAsync();
-            //aqui deberÃ­a comparar los valores de clientes y clientesMock?
-
+            clienteServiceMock.Setup(service => service.GetClientes()).Returns(clientes);
         }
 
-
-        [When(@"el vendedor intenta asociar el cliente con DNI: (.*) a la venta con idVenta: (.*)")]
-        public void WhenElVendedorIntentaAsociarElClienteConDNIALaVentaConIdVenta(int dni, int idVenta)
+        [When(@"ingreso el DNI del cliente (.*)")]
+        public void WhenIngresoElDNIDelCliente(int dni)
         {
-            //ventaServiceMock.Setup(service => service.AsociarCliente(dni)).
-            throw new PendingStepException();
+            ventaServiceMock.Setup(x => x.AsociarCliente(It.IsAny<int>(), It.IsAny<int>()))
+                .Callback<int, int>((dni, idVenta) =>
+                {
+                    // Simulamos la obtención del cliente y la venta (puedes ajustar según tus necesidades)
+                    clienteServiceMock.Setup(service => service.GetClienteById(It.IsAny<int>())).Returns(cliente);
+                    ventaRepositoryMock.Setup(s => s.GetAsync(It.IsAny<int>())).ReturnsAsync(venta);
+
+                    // Asociamos el cliente a la venta
+                    Cliente clienteMock = clienteServiceMock.Object.GetClienteById(dni);
+                    venta.Cliente = clienteMock;
+                });
+
+            try
+            {
+                ventaServiceMock.Object.AsociarCliente(dni, venta.Id);
+            }
+            catch (Exception ex)
+            {
+                mensajeMostrado = ex.Message;
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        [Then(@"se muestra mensaje de error que el cliente con DNI (.*) no existe")]
-        public void ThenSeMuestraMensajeDeErrorQueElClienteConDNINoExiste(int p0)
+        [Then(@"se asocia el cliente a la venta\.")]
+        public void ThenSeAsociaElClienteALaVenta_(Table table)
         {
-            throw new PendingStepException();
+            var clienteEsperado = new Cliente
+            {
+                Dni = int.Parse(table.Rows[0]["dni"])
+            };
+            Assert.Equal(clienteEsperado, venta.Cliente);
         }
 
-
+        [Then(@"se muestra el mensaje ""([^""]*)""")]
+        public void ThenSeMuestraElMensaje(string mensaje)
+        {
+            Assert.Equal(mensaje, mensajeMostrado);
+        }
 
     }
 }

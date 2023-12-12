@@ -13,7 +13,7 @@ namespace Domain.Entities
 
         public Articulo() { }
         public int CodigoBarras { get; set; }
-        public string Descripcion { get; set; }
+        public string? Descripcion { get; set; }
 
         public decimal Costo { get; set; }
 //        public Categoria Categoria { get; set;}
