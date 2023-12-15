@@ -3,13 +3,11 @@ Como vendedor
 Quiero registrar un pago en efectivo 
 Para concretar una venta 
 
-
-Scenario: Monto sea inferior a $92700
+Scenario: cambio de tipo de pago a efectivo
 Given una venta con los datos:
-  |numero|  fecha   |     estado      |
-  |1     |15/02/2023|Pendiente de pago|
-And el monto total de la venta es 52320.0
-When selecciono pago en efectivo
-Then la venta pasa al estado "Pagada"
+  |numero|  fecha   | total   | dniCliente |
+  |1     |15/02/2023| 18150.0 | 43501538   |
+When selecciono pagar en efectivo
+Then se actualiza el tipo de pago a efectivo
 
 

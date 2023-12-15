@@ -3,7 +3,6 @@ package is.tp3.domain;
 public class Pago {
     private Double monto;
     private TipoPago tipoPago;
-
     public Pago() {
     }
 
@@ -22,5 +21,13 @@ public class Pago {
 
     public void setMonto(Double monto) {
         this.monto = monto;
+    }
+
+    public TipoPago getTipoPago() {
+        return tipoPago;
+    }
+
+    public void setTipoPago(TipoPago tipoPago) {
+        this.tipoPago = tipoPago;
     }
 }

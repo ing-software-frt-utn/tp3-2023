@@ -1,12 +1,11 @@
 package service;
 
-import is.tp3.domain.TarjetaCredito;
+import is.tp3.domain.SolicitudAutorizacionPago;
 import repository.TarjetaCreditoRepository;
 
 public class TarjetaCreditoService implements TarjetaCreditoRepository{
     @Override
-    public String solicitudDeAprobacionDePago(TarjetaCredito tarjeta, Double monto) {
-        //llamo a la api magicamente
-        return "Pago aprobado";
+    public String solicitudDeAprobacionDePago(SolicitudAutorizacionPago solicitud) {
+        return "Aprobado";
     }
 }

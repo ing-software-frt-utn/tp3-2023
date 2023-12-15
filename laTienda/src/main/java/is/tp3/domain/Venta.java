@@ -1,12 +1,37 @@
 package is.tp3.domain;
 
+import java.util.List;
+
 public class Venta {
     private int numero;
     private String fecha;
-    private String estado;
     private Pago pago;
-    private Double total;
     private Cliente cliente;
+    private List<LineaVenta> lineasVenta;
+    public LineaVenta crearLineaVenta(Articulo articulo, int cantidad) {
+        LineaVenta lineaVenta = new LineaVenta();
+        lineaVenta.setCantidad(cantidad);
+        lineaVenta.setProducto(articulo);
+        return  lineaVenta;
+    }
+    public Double getTotal() {
+        Double total = 0.0;
+        for (LineaVenta lineaVenta : lineasVenta) {
+            total += lineaVenta.getSubtotal();
+        }
+        return total;
+    }
+
+    public Venta() {
+    }
+
+    public Venta(int numero, String fecha, String estado, Pago pago, Cliente cliente, List<LineaVenta> lineasVenta) {
+        this.numero = numero;
+        this.fecha = fecha;
+        this.pago = pago;
+        this.cliente = cliente;
+        this.lineasVenta = lineasVenta;
+    }
 
     public int getNumero() {
         return numero;
@@ -18,14 +43,6 @@ public class Venta {
 
     public String getFecha() {
         return fecha;
-    }
-
-    public Double getTotal() {
-        return total;
-    }
-
-    public void setTotal(Double total) {
-        this.total = total;
     }
 
     public void setFecha(String fecha) {
@@ -40,14 +57,6 @@ public class Venta {
         this.pago = pago;
     }
 
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
     public Cliente getCliente() {
         return cliente;
     }
@@ -56,22 +65,11 @@ public class Venta {
         this.cliente = cliente;
     }
 
-    public Venta() {
+    public List<LineaVenta> getLineasVenta() {
+        return lineasVenta;
     }
 
-    public Venta(int numero, String fecha, String estado, Pago pago, Double total) {
-        this.numero = numero;
-        this.fecha = fecha;
-        this.estado = estado;
-        this.pago = pago;
-        this.total = total;
-    }
-
-    public Venta(int numero, String fecha, String estado, Double total, Cliente cliente) {
-        this.numero = numero;
-        this.fecha = fecha;
-        this.estado = estado;
-        this.total = total;
-        this.cliente = cliente;
+    public void setLineasVenta(List<LineaVenta> lineasVenta) {
+        this.lineasVenta = lineasVenta;
     }
 }

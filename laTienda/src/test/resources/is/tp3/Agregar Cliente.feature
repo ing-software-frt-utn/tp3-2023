@@ -1,3 +1,5 @@
+//2 scenarios solicitud del pago y luego la ejecucion del pago
+
 Feature: Agregar Cliente
   Como vendedor
   Quiero ingresar un cliente

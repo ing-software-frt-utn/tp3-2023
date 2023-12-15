@@ -1,10 +1,10 @@
 package is.tp3;
 
 import io.cucumber.java.en.*;
-import is.tp3.domain.TarjetaCredito;
-import is.tp3.domain.Venta;
+import is.tp3.domain.*;
 import service.TarjetaCreditoService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -15,19 +15,21 @@ public class PagoConTarjetaStepDefinitions {
     Venta v;
     TarjetaCredito tarjeta;
     TarjetaCreditoService service = new TarjetaCreditoService();
-    @Given("una venta en curso con los datos:")
-    public void una_venta_en_curso_con_los_datos(List<Map<String, String>> tabla) {
+    SolicitudAutorizacionPago solicitud;
+    String respuesta;
+
+    @Given("una venta en curso con total de {double}")
+    public void una_venta_en_curso_con_total_de(Double total) {
         v = new Venta();
-        for (Map<String, String> fila : tabla) {
-            int numero = Integer.parseInt(fila.get("numero"));
-            String fecha = fila.get("fecha");
-            String estado = fila.get("estado");
-            Double total = Double.parseDouble(fila.get("total"));
-            v.setNumero(numero);
-            v.setFecha(fecha);
-            v.setEstado(estado);
-            v.setTotal(total);
-        }
+        Articulo articulo = new Articulo();
+        articulo.setCodigo(1);
+        articulo.setNombre("Calza");
+        articulo.setCosto(10000.0);
+        articulo.setMargenGanancia(0.5);
+        List<LineaVenta> lineasVenta = new ArrayList<>();
+        lineasVenta.add(v.crearLineaVenta(articulo, 1));
+        v.setLineasVenta(lineasVenta);
+        assertEquals(total, v.getTotal());
     }
 
     @Given("tengo los datos de la tarjeta:")
@@ -49,18 +51,12 @@ public class PagoConTarjetaStepDefinitions {
     }
     @When("solicito autorizacion de pago al sistema externo de pago con tarjeta")
     public void solicito_autorizacion_de_pago_al_sistema_externo_de_pago_con_tarjeta() {
-        service.solicitudDeAprobacionDePago(tarjeta, v.getTotal());
+        solicitud = new SolicitudAutorizacionPago(tarjeta, v.getTotal());
+        respuesta = service.solicitudDeAprobacionDePago(solicitud);
+        solicitud.setEstado(respuesta);
     }
-
-    @When("recibo como respuesta {string}")
-    public void recibo_como_respuesta(String string) {
-        String respuesta = service.solicitudDeAprobacionDePago(tarjeta, v.getTotal());
-        assertEquals(string, respuesta);
-    }
-
-    @Then("la venta pasa al estado de {string}")
-    public void la_venta_pasa_al_estado_de(String string) {
-        v.setEstado("aceptada");
-        assertEquals(string,v.getEstado());
+    @Then("la solicitud pasa al estado de {string}")
+    public void la_solicitud_pasa_al_estado_de(String estado) {
+            assertEquals(estado, solicitud.getEstado());
     }
 }
